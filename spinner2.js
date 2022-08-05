@@ -1,16 +1,8 @@
-process.stdout.write('hello from spinner1.js... \rheyyy\n');
-
-const spinner = ['\r|   ', '\r/   ', '\r-   ', '\r\   ', '\r|   ', '\r/   ', '\r-   ', '\r\   '];
+const input = ['\r|   ', '\r/   ', '\r-   ', '\r\\   ', '\r|   ', '\r/   ', '\r-   ', '\r\\   \n']
 let time = 100;
-for (const symbol of spinner) {
+for (const each of input) {
   setTimeout(() => {
-    process.stdout.write(symbol);
+    process.stdout.write(each)
   }, time)
-  time += 200;
+  time += 400
 }
-
-
-
-setTimeout(() => {
-  process.stdout.write('\r|   ');
-}, 1700);
